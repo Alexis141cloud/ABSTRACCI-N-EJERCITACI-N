@@ -1,0 +1,14 @@
+from abc import ABC, abstractmethod
+
+class Notificacion(ABC):
+    @abstractmethod
+    def enviar(self):
+        pass
+
+class Email(Notificacion):
+    def enviar(self):
+        return "Enviando notificación por correo electrónico (Email)."
+
+class SMS(Notificacion):
+    def enviar(self):
+        return "Enviando notificación por mensaje de texto (SMS)."
